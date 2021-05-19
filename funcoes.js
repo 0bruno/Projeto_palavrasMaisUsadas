@@ -18,12 +18,17 @@ function lerDiretorio(caminho) {
 function lerArquivo(caminho) {
   return new Promise((resolve, reject) => {
     try {
-      const content = fs.readdirSync(caminho, { encoding: 'utf-8' });
+      const content = fs.readFileSync(caminho, { encoding: 'utf-8' });
       resolve(content);
     } catch (e) {
       reject(e);
     }
   });
+}
+
+//funcao para ler todos os arquivos
+function lerArquivos(caminhos) {
+  return Promise.all(caminhos.map((caminho) => lerArquivo(caminho)));
 }
 
 //apresentando a funcao endsWith "terminado com"
@@ -34,5 +39,7 @@ function arquivosTerminadosCom(array, padrao) {
 module.exports = {
   //conjunto chave: valor
   lerDiretorio,
+  lerArquivo,
+  lerArquivos,
   arquivosTerminadosCom,
 };
