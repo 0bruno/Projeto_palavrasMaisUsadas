@@ -6,7 +6,7 @@ function lerDiretorio(caminho) {
   return new Promise((resolve, reject) => {
     try {
       let arquivos = fs.readdirSync(caminho);
-      arquivos = aarquivos.map((arquivos) => path.join(caminho, arquivos));
+      arquivos = arquivos.map((arquivos) => path.join(caminho, arquivos));
       resolve(arquivos);
     } catch (e) {
       reject('Ocorreu Erro');
