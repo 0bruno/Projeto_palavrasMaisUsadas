@@ -1,3 +1,4 @@
-//criar funao que retorna a lista de arquivos de um determinado diretorio
+//criar funcao responsavel por ler um diretorio
 
 //exportando funcao
+module.exports = {};
