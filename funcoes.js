@@ -14,6 +14,13 @@ function lerDiretorio(caminho) {
   });
 }
 
+//apresentando a funcao endsWith "terminado com"
+function arquivosTerminadosCom(array, padrao) {
+  return array.filter((el) => el.endsWith(padrao));
+}
+
 module.exports = {
+  //conjunto chave: valor
   lerDiretorio,
+  arquivosTerminadosCom,
 };
