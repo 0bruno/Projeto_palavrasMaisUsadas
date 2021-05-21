@@ -37,6 +37,9 @@ function arquivosTerminadosCom(array, padrao) {
 }
 
 //o trim() remove espacos vazioa na string
+function removeSeVazio(array) {
+  return array.filter((el) => el.trim());
+}
 
 module.exports = {
   //conjunto chave: valor
@@ -44,4 +47,5 @@ module.exports = {
   lerArquivo,
   lerArquivos,
   arquivosTerminadosCom,
+  removeSeVazio,
 };
