@@ -11,7 +11,7 @@ fn.lerDiretorio(caminho)
   //quebrando todas as linhas de todos os arquivos separando o texto em varias linhas
   .then((todosConteudos) => todosConteudos.split('\n'))
   //removendo linhas vazias com trim()
-  .then()
+  .then((linhasVazias) => fn.removeSeVazio(linhasVazias))
 
   .then(console.log)
   .catch((err) => console.log(err));
