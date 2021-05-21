@@ -41,6 +41,8 @@ function removeSeVazio(array) {
   return array.filter((el) => el.trim());
 }
 
+//removendo tempo das legendas com inNAN()
+
 module.exports = {
   //conjunto chave: valor
   lerDiretorio,
