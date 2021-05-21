@@ -13,6 +13,7 @@ fn.lerDiretorio(caminho)
   //removendo linhas vazias com trim()
   .then((linhasVazias) => fn.removeSeVazio(linhasVazias))
   //removendo os tempos das legendas
+  .then((removeTempo) => fn.removeTime(removeTempo))
 
   .then(console.log)
   .catch((err) => console.log(err));
