@@ -42,6 +42,9 @@ function removeSeVazio(array) {
 }
 
 //removendo tempo das legendas com inNAN()
+function removeTime(array) {
+  return array.filter((el) => el.isNaN());
+}
 
 module.exports = {
   //conjunto chave: valor
@@ -50,4 +53,5 @@ module.exports = {
   lerArquivos,
   arquivosTerminadosCom,
   removeSeVazio,
+  removeTime,
 };
