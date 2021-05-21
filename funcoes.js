@@ -43,7 +43,7 @@ function removeSeVazio(array) {
 
 //removendo tempo das legendas com inNAN()
 function removeTime(array) {
-  return array.filter((el) => el.isNaN());
+  return array.filter((el) => isNaN(el));
 }
 
 module.exports = {
