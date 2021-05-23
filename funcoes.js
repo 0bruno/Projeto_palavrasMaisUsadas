@@ -36,7 +36,7 @@ function arquivosTerminadosCom(array, padrao) {
   return array.filter((el) => el.endsWith(padrao));
 }
 
-//o trim() remove espacos vazioa na string
+//o trim() remove espacos vazioa na string.
 function removeSeVazio(array) {
   return array.filter((el) => el.trim());
 }
