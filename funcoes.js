@@ -31,7 +31,7 @@ function lerArquivos(caminhos) {
   return Promise.all(caminhos.map((caminho) => lerArquivo(caminho)));
 }
 
-//apresentando a funcao endsWith "terminado com"
+//apresentando a funcao endsWith "terminado com".
 function arquivosTerminadosCom(array, padrao) {
   return array.filter((el) => el.endsWith(padrao));
 }
