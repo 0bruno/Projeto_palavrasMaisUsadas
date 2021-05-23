@@ -26,7 +26,7 @@ function lerArquivo(caminho) {
   });
 }
 
-//funcao para ler todos os arquivos
+//funcao para ler todos os arquivos.
 function lerArquivos(caminhos) {
   return Promise.all(caminhos.map((caminho) => lerArquivo(caminho)));
 }
