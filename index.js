@@ -3,7 +3,7 @@ const fn = require('./funcoes');
 const caminho = path.join(__dirname, 'legendas');
 
 fn.lerDiretorio(caminho)
-  //filtandro terminados com srt
+  //filtandro terminados com srt.
   .then((arquivos) => fn.arquivosTerminadosCom(arquivos, '.srt'))
   .then((arquivosSRT) => fn.lerArquivos(arquivosSRT))
   //juntando todos os conteudos com join no array
