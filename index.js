@@ -12,7 +12,7 @@ fn.lerDiretorio(caminho)
   .then((todosConteudos) => todosConteudos.split('\n'))
   //removendo linhas vazias com trim().
   .then((linhasVazias) => fn.removeSeVazio(linhasVazias))
-  //removendo os tempos das legendas
+  //removendo os tempos das legendas.
   .then((removeTempo) => fn.removeTime(removeTempo))
 
   .then(console.log)
