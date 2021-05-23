@@ -8,7 +8,7 @@ fn.lerDiretorio(caminho)
   .then((arquivosSRT) => fn.lerArquivos(arquivosSRT))
   //juntando todos os conteudos com join no array
   .then((conteudos) => conteudos.join('\n'))
-  //quebrando todas as linhas de todos os arquivos separando o texto em varias linhas
+  //quebrando todas as linhas de todos os arquivos separando o texto em varias linhas.
   .then((todosConteudos) => todosConteudos.split('\n'))
   //removendo linhas vazias com trim()
   .then((linhasVazias) => fn.removeSeVazio(linhasVazias))
