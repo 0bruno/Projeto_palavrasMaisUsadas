@@ -10,7 +10,7 @@ fn.lerDiretorio(caminho)
   .then((conteudos) => conteudos.join('\n'))
   //quebrando todas as linhas de todos os arquivos separando o texto em varias linhas.
   .then((todosConteudos) => todosConteudos.split('\n'))
-  //removendo linhas vazias com trim()
+  //removendo linhas vazias com trim().
   .then((linhasVazias) => fn.removeSeVazio(linhasVazias))
   //removendo os tempos das legendas
   .then((removeTempo) => fn.removeTime(removeTempo))
