@@ -14,7 +14,7 @@ function lerDiretorio(caminho) {
   });
 }
 
-//funcao ler arquivo de cada conteudo
+//funcao ler arquivo de cada conteudo.
 function lerArquivo(caminho) {
   return new Promise((resolve, reject) => {
     try {
