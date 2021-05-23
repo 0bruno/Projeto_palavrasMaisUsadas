@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-//criar funcao responsavel por ler um diretorio
+//criar funcao responsavel por ler um diretorio.
 function lerDiretorio(caminho) {
   return new Promise((resolve, reject) => {
     try {
