@@ -77,5 +77,4 @@ module.exports = {
   removeSeTiver,
   removeNumero,
   removeCaracteres,
-  separarTextoPor,
 };
