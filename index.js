@@ -19,7 +19,7 @@ const simbolos = [
   '♪',
 ];
 
-const mesclarConteudos = (conteudos) => conteudos.join('\n');
+const mesclarConteudos = (conteudos) => conteudos.join(' ');
 const separarPorLinhas = (todosConteudos) => todosConteudos.split('\n');
 const separarPorPalavras = (todosConteudos) => todosConteudos.split(' ');
 
@@ -39,10 +39,12 @@ fn.lerDiretorio(caminho)
   .then((removeNumeros) => fn.removeNumero(removeNumeros))
   //removendo Caracteres
   .then((removeCaracteres) => fn.removeCaracteres(simbolos)(removeCaracteres))
-  //mesclando conteudos denovo
+  //juntando todos os conteudos com join no array.
   .then(mesclarConteudos)
   //separando por palavras com split em cima de um espaco em branco
   .then(separarPorPalavras)
+  //removendo linhas vazias com trim().
+  .then((linhasVazias) => fn.removeSeVazio(linhasVazias))
 
   .then(console.log)
   .catch((err) => console.log(err));
