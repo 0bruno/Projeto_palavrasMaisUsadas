@@ -46,6 +46,8 @@ function removeTime(array) {
   return array.filter((el) => isNaN(el));
 }
 
+//removendo caracteres
+
 module.exports = {
   //conjunto chave: valor
   lerDiretorio,
