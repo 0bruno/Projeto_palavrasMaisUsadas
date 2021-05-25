@@ -29,8 +29,12 @@ fn.lerDiretorio(caminho)
   .then((todosConteudos) => todosConteudos.split('\n'))
   //removendo linhas vazias com trim().
   .then((linhasVazias) => fn.removeSeVazio(linhasVazias))
-  //removendo os tempos das legendas.
-  .then((removeTempo) => fn.removeTime(removeTempo))
+  //removendo se tiver algum padrao
+  .then((removendoPadrao) => fn.removeSeTiver(removendoPadrao, '-->'))
+  //removendo os numeros das legendas.
+  .then((removeNumeros) => fn.removeNumero(removeNumeros))
+  //removendo Caracteres
+  .then((removeCaracteres) => fn.removeCaracteres(simbolos)(removeCaracteres))
 
   .then(console.log)
   .catch((err) => console.log(err));

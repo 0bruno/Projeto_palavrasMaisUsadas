@@ -41,12 +41,31 @@ function removeSeVazio(array) {
   return array.filter((el) => el.trim());
 }
 
-//removendo tempo das legendas com inNAN().
-function removeTime(array) {
+function removeSeTiver(array, padrao) {
+  return array.filter((el) => !el.includes(padrao));
+}
+
+//removendo numero das legendas com inNAN().
+function removeNumero(array) {
   return array.filter((el) => isNaN(el));
 }
 
 //removendo caracteres
+function removeCaracteres(simbolos) {
+  return function (array) {
+    //dentro do map percorrer cada um dos simbolos
+    return array.map((el) => {
+      let textoSemSimbolos = el;
+      //percorrendo cada um dos simbolos
+      simbolos.forEach((simbolo) => {
+        //para cada novo simbolo e feito um split em cima do texto atual
+        //removendo todos os simbolos de todas as strings
+        textoSemSimbolos = textoSemSimbolos.split(simbolo).join('');
+      });
+      return textoSemSimbolos;
+    });
+  };
+}
 
 module.exports = {
   //conjunto chave: valor
@@ -55,5 +74,7 @@ module.exports = {
   lerArquivos,
   arquivosTerminadosCom,
   removeSeVazio,
-  removeTime,
+  removeSeTiver,
+  removeNumero,
+  removeCaracteres,
 };
