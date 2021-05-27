@@ -48,3 +48,5 @@ fn.lerDiretorio(caminho)
 
   .then(console.log)
   .catch((err) => console.log(err));
+
+//continuar aula 58 agrupando palavras
