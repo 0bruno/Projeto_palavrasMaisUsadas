@@ -67,6 +67,8 @@ function removeCaracteres(simbolos) {
   };
 }
 
+//assistindo aul teorica
+
 module.exports = {
   //conjunto chave: valor
   lerDiretorio,
