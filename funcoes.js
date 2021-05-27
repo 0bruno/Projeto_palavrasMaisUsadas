@@ -67,6 +67,26 @@ function removeCaracteres(simbolos) {
   };
 }
 
+//criando funcao callback pro reduce
+function callback(acc, palavra) {
+  const p = palavra.toLowerCase();
+  //verificar se o objeto  acumulador tem o atributo com com esse nome passado no array
+  if (acc[p]) {
+    acc[p] += 1;
+  } else {
+    acc[p] = 1;
+  }
+  return acc;
+}
+
+//criando objeto vazio pro reduce
+const valorInicial = {};
+
+//passando callback no reduce
+function agruparPalavras(palavras) {
+  return palavras.reduce(callback, valorInicial);
+}
+
 //assistindo aul teorica
 
 module.exports = {
@@ -79,4 +99,5 @@ module.exports = {
   removeSeTiver,
   removeNumero,
   removeCaracteres,
+  agruparPalavras,
 };

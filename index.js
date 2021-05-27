@@ -45,6 +45,10 @@ fn.lerDiretorio(caminho)
   .then(separarPorPalavras)
   //removendo linhas vazias com trim().
   .then((linhasVazias) => fn.removeSeVazio(linhasVazias))
+  //removendo os numeros das legendas.
+  .then((removeNumeros) => fn.removeNumero(removeNumeros))
+  //agrupando palavras passando array com todas as palavras
+  .then((palavras) => fn.agruparPalavras(palavras))
 
   .then(console.log)
   .catch((err) => console.log(err));
