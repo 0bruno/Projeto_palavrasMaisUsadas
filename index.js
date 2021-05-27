@@ -48,4 +48,3 @@ fn.lerDiretorio(caminho)
 
   .then(console.log)
   .catch((err) => console.log(err));
-console.log('Executou primeiro');
