@@ -47,7 +47,7 @@ fn.lerDiretorio(caminho)
   .then((linhasVazias) => fn.removeSeVazio(linhasVazias))
   //removendo os numeros das legendas.
   .then((removeNumeros) => fn.removeNumero(removeNumeros))
-  //agrupando palavras passando array com todas as palavras
+  //faz um agrupamento das palavras do array contando quantas vezes cada palavra aparece
   .then((palavras) => fn.agruparPalavras(palavras))
 
   .then(console.log)
