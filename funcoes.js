@@ -69,13 +69,10 @@ function removeCaracteres(simbolos) {
 
 //criando funcao callback pro reduce
 function callback(acc, palavra) {
-  const p = palavra.toLowerCase();
+  const el = palavra.toLowerCase();
   //verificar se o objeto  acumulador tem o atributo com com esse nome passado no array
-  if (acc[p]) {
-    acc[p] += 1;
-  } else {
-    acc[p] = 1;
-  }
+  const qtde = acc[el] ? (acc[el].qtde += 1) : 1;
+  acc[el] = { elemento: el, qtde: qtde };
   return acc;
 }
 
@@ -84,6 +81,7 @@ const valorInicial = {};
 
 //passando callback no reduce
 function agruparPalavras(palavras) {
+  //poderia ter usado Object.values() para retornar so a chave valor do objeto
   return palavras.reduce(callback, valorInicial);
 }
 
